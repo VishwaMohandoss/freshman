@@ -1,0 +1,473 @@
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- file name: contact.HTML(freshman toolkit Contact)   -->
+<!--       Created by: Vishwa Mohandoss           -->
+<!--       Created on: 18-September-2022            -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+
+
+
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" rcorners3="IE=edge">
+  <meta name=”viewport” rcorners3=”width=device-width, initial-scale=1.0″>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <title> freshman toolkit Contact </title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="shortcut icon" href="https://freshman.z13.web.core.windows.net/uonicon.ico">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+
+<body>
+
+  <style>
+    body {
+      background-color: white;
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: cover;
+      background-size: 100% 100%;
+    }
+
+    #column_Academic img {
+      border: 50px;
+      border: 1px solid #ddd;
+      padding: 5px;
+      width: 200px;
+      height: 150px;
+    }
+
+    #column_Academic img:hover {
+      box-shadow: 0 0 2px 1px rgba(26, 40, 159, 0.5);
+      /*background-image: url("images/club/clubhover.jpeg"); */
+    }
+
+    #column_Academic img a:link :hover {
+
+      width: 400px;
+
+    }
+    
+  </style>
+
+
+
+  <div class="navbar">
+    <a href="index.html"><img src="images/BG/UON_LG.jpg" style="width:60px;height:40px;"></a>
+    <a href="index.html"><i class="fa fa-fw fa-home"></i> Home</a>
+    <a href="campus_life.html"><i class="fas fa-cloud"></i>CAMPUS LIFE</a>
+    <a class="active" href="freshie_guide.html"><i class="fa fa-fw fa-envelope"></i> FRESHIE GUIDE</a>
+    <a href="Contact_us.html"><i class="fa fa-comments-o"></i> Contact US </a>
+    <a href="Clubs.html"><i class="fa fa-gratipay"></i> Community & Clubs </a>
+    <a href="login.html"><i class="fa fa-fw fa-user"></i> Admin Login</a>
+    <!-- start clock part here... -->
+
+    <div style="text-align: right;">
+
+      <head>
+        <span>
+      </head>
+
+      <body onload="initClock()">
+
+        <!--digital clock start-->
+        <div class="datetime">
+          <div class="date">
+            <span id="dayname">Day</span>,
+            <span id="month">Month</span>
+            <span id="daynum">00</span>,
+            <span id="year">Year</span>
+          </div>
+          <div class="time">
+            <span id="hour">00</span>:
+            <span id="minutes">00</span>:
+            <span id="seconds">00</span>
+            <span id="period">AM</span>
+          </div>
+        </div>
+        <!--digital clock end-->
+
+        <script type="text/javascript">
+          function updateClock() {
+            var now = new Date();
+            var dname = now.getDay(),
+              mo = now.getMonth(),
+              dnum = now.getDate(),
+              yr = now.getFullYear(),
+              hou = now.getHours(),
+              min = now.getMinutes(),
+              sec = now.getSeconds(),
+              pe = "AM";
+
+            if (hou >= 12) {
+              pe = "PM";
+            }
+            if (hou == 0) {
+              hou = 12;
+            }
+            if (hou > 12) {
+              hou = hou - 12;
+            }
+
+            Number.prototype.pad = function (digits) {
+              for (var n = this.toString(); n.length < digits; n = 0 + n);
+              return n;
+            }
+
+            var months = ["January", "February", "March", "April", "May", "June", "July", "Augest", "September", "September", "November", "December"];
+            var week = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+            var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+            var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+            for (var i = 0; i < ids.length; i++)
+              document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+          }
+
+          function initClock() {
+            updateClock();
+            window.setInterval("updateClock()", 1000);
+          }
+        </script>
+    </div>
+  </div>
+
+</body>
+</head>
+
+<body>
+  <h3> Welcome <b><span id="result"></span></b> !!! </h3>
+  <h1> freshman toolkit</h1>
+  <script>
+    document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+  </script>
+
+  <div>
+    <ul>
+      <li style="display: inline-block;">
+        <div id="rcorners3">
+          <h3>FRESHIE GUIDE</h3>
+          <p>FRESHMAN TOOLKIT - The Checklist to help you get information about your class at UON! <a
+              href="contact.html">
+              <button class="btn btn-primary btn-lg" style="background-color: white;">Learn More</button>
+            </a> </p>
+        </div>
+      </li><br><br><br>
+      <li style="display: inline-block;">
+        <div id="rcorners3">
+          <p>Look through your personal email for your UON student ID, student email and other login details!</p>
+        </div>
+      </li><br><br><br>
+      <li style="display: inline-block;">
+        <div id="rcorners3">
+          <p>Look through your personal email for your UON student ID, student email and other login details!</p>
+        </div>
+      </li><br><br><br>
+      <li style="display: inline-block;">
+        <div id="rcorners3">
+          <p>Look through your personal email for your UON student ID, student email and other login details!</p>
+        </div>
+      </li><br><br><br>
+      <li style="display: inline-block;">
+        <div id="rcorners3">
+          <p>Look through your personal email for your UON student ID, student email and other login details!</p>
+        </div>
+      </li><br><br><br>
+      <li style="display: inline-block;">
+        <div id="rcorners3">
+          <p>Submit a Request for your Student ID card online! (Don't forget to collect it later)</p>
+        </div>
+      </li>
+    </ul>
+  </div>
+
+
+  <div style="background-color: #c9ecec;">
+    <h3>Students Testimonies Video !</h3>
+    <ul>
+      <li style="display: inline-block;"><iframe width="560" height="315"
+          src="https://www.youtube.com/embed/O2FsoXkkuZM" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+      <li style="display: inline-block;"> <iframe width="560" height="315"
+          src="https://www.youtube.com/embed/3UUcOIWNf-s" title="YouTube video player" frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          allowfullscreen></iframe>
+      </li>
+    </ul>
+  </div>
+</body>
+
+</head>
+
+<body>
+
+
+  <!-- Portfolio Gallery Grid -->
+  <div id="column_Academic">
+
+    <div id="rcorners2">
+
+      <a href="https://books.newcastle.edu.au/patroninfo"> <img src="images/fstudent/Library.png" alt="Academic"></a>
+      <h4>Library</h4>
+      <p>MyLibrary is your personal space. It allows you to: Save favourite searches, Keep a record of your reading
+        history, View your loans, Renew your loans and more.</p>
+    </div> <br>
+
+
+    <div id="rcorners2">
+      <a
+        href="https://www.newcastle.edu.au/current-students/support/academic/workshops-consultations-advisors/peer-assisted-study-sessions">
+        <img src="images/fstudent/Pass.jpeg" alt="Academic"></a>
+      <h4>Peer assisted study sessions (PASS)</h4>
+      <p>Peer Assisted Study Sessions (PASS) provide a platform for you to compare notes, discuss difficult concepts and
+        review weekly material with other students.</p>
+    </div><br>
+
+
+    <div id="rcorners2">
+
+      <a href="https://community.canvaslms.com/t5/Canvas-Student/ct-p/canvas_student"> <img
+          src="images/fstudent/CanvasHelpDesk.jpg" alt="CanvasHelpDesk"> </a>
+      <h4>Canvas Helpdesk</h4>
+      <p>View Canvas Student Guides and View Canvas for Elementary Student Guides...</p>
+    </div> <br>
+
+
+    <div id="rcorners2">
+
+      <a href="https://www.newcastle.edu.au/current-students/support/it/it-service-desk"> <img
+          src="images/fstudent/ITSERVICEDESK.png" alt="ITSERVICEDESK"> </a>
+      <h4>IT Service Desk</h4>
+      <p>The IT Service Desk is here to help. You can access support 24 hours a day via our Virtual Agent below or the
+        IT Service Portal (ServiceNow)...</p>
+    </div><br>
+
+
+
+    <div id="rcorners2">
+
+      <a href="https://www.newcastle.edu.au/current-students/support/personal"> <img src="images/fstudent/personals.png"
+          alt="Personal support"> </a>
+      <h4>Personal support</h4>
+      <p>Your time at the University of Newcastle can be one of the most rewarding periods of your life, but it’s also a
+        time when you will probably need a range of support and advice. ..</p>
+    </div><br>
+
+
+    <div id="rcorners2">
+
+      <a href="https://www.psb-academy.edu.sg/student-resources#student-services"> <img
+          src="images/fstudent/studentbenefits.jpg" alt="Student Benefits"></a>
+      <h4>Student Benefits</h4>
+      <p>Student Advantage is the largest student discount program, and offers discounts...</p>
+    </div><br>
+
+
+    <div id="rcorners2">
+
+      <a href="https://www.newcastle.edu.au/current-students/support/personal/financial-wellbeing"> <img
+          src="images/fstudent/financial-wellbeing.png" alt="Financial wellbeing"> </a>
+      <h4>Financial wellbeing</h4>
+      <p>If you are doing it tough financially – whether it be that you aren’t sure how you’ll afford your course or
+        have the bills stacking up – there are a range of financial services to help keep you afloat...</p>
+    </div><br>
+
+
+
+    <div id="rcorners2">
+
+      <a href="https://askuon.newcastle.edu.au/app/hot_topics"> <img src="images/fstudent/ASk_uon.png" alt="Car"> </a>
+      <h4>ASK UON</h4>
+      <p>You can view your final results in myHub. Results from all the Course Assessment items will be incorporated in
+        your final result. Results will be available on the Fully Graded Date. To access your...</p>
+    </div><br>
+
+
+    <div id="rcorners2">
+
+      <a href="https://linktr.ee/scspsbsc?utm_source=qr_code"> <img src="images/fstudent/scspsbsc.png" alt="scspsbsc">
+      </a>
+      <h4>scspsbsc</h4>
+      <p>Singapore Computer Society Student Chapter...</p>
+    </div><br>
+
+    <!-- END GRID -->
+  </div>
+  <div class="container1">
+    <div class="content">
+      <div class="content-2">
+
+        <div class="recent-payments">
+          <div class="title">
+            <h2>Emergency Hotlines</h2>
+            <a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit All</a>
+          </div>
+          <table>
+            <tr>
+              <th>Number</th>
+              <th>department</th>
+              <th>Working Hours</th>
+              <th>Option</th>
+            </tr>
+            <tr>
+              <td>999</td>
+              <td>Police Emergencies</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>995</td>
+              <td>SCDF Ambulance and Fire Service</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>1777</td>
+              <td>Non-Emergency Ambulance Service</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>6547 0000</td>
+              <td>Traffic Police Information Hotline</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>1800 255 0000</td>
+              <td>Police Hotline</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>71999</td>
+              <td>Police Emergency SMS</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>1800 284 6600</td>
+              <td>Floods or Drain Obstructions</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>1800 275 5555</td>
+              <td>HDB Essential Maintenance Service Unit</td>
+              <td> 24/7 Support</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+            <tr>
+              <td>+65 6390 9000</td>
+              <td>PSB Academy, Singapore</td>
+              <td> 8.30am – 10.00pm</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+
+            <tr>
+              <td>+61 2 4921 5000</td>
+              <td>University of Newcastle, Australia</td>
+              <td> 8.30am – 10.00pm</td>
+              <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </div>
+</body>
+
+<body>
+  <hr>
+  <div class="footer">
+    <div>
+      <ul>
+        <li style="display: inline-block;">
+          <h4> Contact</h4>
+          <p style="color:white;">
+            Newcastle Australia IHE100<br>
+            Victoria Street#13-01/02<br>
+            National Library Building<br>
+            Singapore 188064<br>
+            <a style="color: white;" ;href="+65 6221 3306">+65 6221 3306</a>
+
+            <br>
+          </p>
+        </li>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <li style="display: inline-block;">
+          <h4>Reach Us</h4>
+
+          <body>
+            <form name="quick_form" id="myForm1">
+              <input type="hidden">
+              <div>
+                <label for="FirstName">Name</label><br>
+                <input type="text" placeholder="Enter Name here" name="fullName" id="FirstName">
+              </div>
+              <div>
+                <label for="email address"> Email ID</label><br>
+                <input type="text" name="email_address" placeholder="Enter email address" id="email address">
+              </div>
+              <div>
+                <label for="query"> Message </label><br>
+                <input type="text" style=" height: 50px;" name="query" id="query"
+                  placeholder="Enter your query here...">
+              </div>
+              <input type="hidden" name="submission_time" id="submission_time">
+              <input type="hidden" name="response_status" value="NO" id="response_status">
+              <div><button style="background-color: Orange;" id="submitForm1" onclick='SubForm1()'>Submit </button>
+            </form>
+            <script>
+              const date = new Date();
+
+              document.quick_form.submission_time.value = date;
+              function SubForm1() {
+                $.ajax({
+                  url: "https://api.apispreadsheets.com/data/s9HkLPLxr4EUhjsR/",
+                  type: "post",
+                  data: $("#myForm1").serializeArray()
+                });
+
+                alert("Thanks For Contacting Us, We can reach you back soon!");
+              }
+            </script>
+
+        </li> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <li style="display: inline-block;">
+          <h4> Campus Location</h4>
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31910.47095399324!2d103.82530736715651!3d1.2888811398348294!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31da197f38ae8cad%3A0xf0cc7e9c37d34d23!2sPSB%20Academy%20City%20Campus%3A%20Main%20Wing!5e0!3m2!1sen!2ssg!4v1666895650891!5m2!1sen!2ssg"
+            width="850" height="200" style="border:0;" allowfullscreen="" loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </li>
+      </ul>
+    </div>
+  </div>
+</body>
+<p style="color:white;  text-align: right;">
+  <a style="color: lightblue;" ; href="https://policies.newcastle.edu.au/document/view-current.php?id=187"> Copyright
+    2022 &copy; Dreams Designers </a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+  <a style="color: lightblue;" ; href="https://policies.newcastle.edu.au/document/view-current.php?id=94"> PRIVACY AND
+    POLICY </a>
+</p>
+</div>
+<button onclick="topFunction()" id="myBtn" title="Go to top">Top <i class='fas fa-arrow-alt-circle-up'></i></button>
+
+</html>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+<!-- file name: contact.HTML(freshman toolkit Contact)   -->
+<!--        Completed by: Vishwa Mohandoss        -->
+<!--        Completed on: 29-September-2022         -->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
