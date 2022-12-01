@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name=”viewport” content=”width=device-width, initial-scale=1.0″>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Adminstyle.css">
+    <link rel="shortcut icon" href="https://freshman.z13.web.core.windows.net/uonicon.ico">
+    <title>Admin Page</title>
+</head>
+<script>
+    document.getElementById("result").innerHTML = localStorage.getItem("textvalue");
+</script>
+
+<body>
+    <div class="side-menu">
+        <div class="brand-name">
+            <a href="#"><img src="../images/BG/UON_LG.jpg" style="width:180px;height:70px;"></a>
+        </div>
+        <ul>
+            <li><a href="../Admin/Dashboard.html"><i class="fa fa-bullseye"
+                        aria-hidden="true"></i>&nbsp;<span>Dashboard</span> </a></li>
+            <li><a href="../Admin/Students.html"><i class="fa fa-user-o"
+                        aria-hidden="true"></i>&nbsp;<span>Students</span></a> </li>
+            <li><a href="../Admin/Teachers.html"><i class="fa fa-address-card fa-10x"
+                        aria-hidden="true"></i>&nbsp;<span>Teachers</span></a> </li>
+            <li><a href="../Admin/campus.html"><i class="fa fa-university"
+                        aria-hidden="true"></i>&nbsp;<span>Campus</span></a> </li>
+            <li><a href="../Admin/Enquiries.html"><i class="fa fa-envelope"
+                        aria-hidden="true"></i>&nbsp;<span>Enquiries</span></a> </li>
+            <li><a href="../Admin/Quick_Enquiries.html"><i class="fa fa-envelope-square"
+                        aria-hidden="true"></i></i>&nbsp;<span>Quick Enquiries</span></a> </li>
+            <li class="active"><a href="../Admin/Help.html"><i class="fa fa-medkit" aria-hidden="true"></i>&nbsp;
+                    <span>Help</span></a></li>
+            <li><a href="../Admin/Settings.html"><i class="fa fa-cog"
+                        aria-hidden="true"></i>&nbsp;<span>Settings</span></a> </li>
+        </ul>
+    </div>
+    <div class="container">
+        <div class="header">
+            <div class="nav">
+                <div class="search">
+                    <input type="text" placeholder="Search..">
+                    <button type="submit"><i class="fa fa-search fa-10x"></i></button>
+                </div>
+                <div class="user">
+                    <a href="#" class="btn">Add New</a>
+                    <button type="button"><i class="fa fa-bell fa-10x" aria-hidden="true"></i></button>
+
+                    <div class="dropdown">
+                        <button class="dropbtn"><img src="../images/admin/adminlogo.png" alt=""></button>
+                        <div class="dropdown-content">
+                            <a href="#"><i class="fa fa-user" aria-hidden="true"></i>Profile</a>
+                            <a href="../login.html"><i class="fa fa-users" aria-hidden="true"></i>Switch User</a>
+                            <a href="../index.html"><i class="fa fa-sign-out" aria-hidden="true"></i>Log Out!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="content">
+            <div class="cards">
+                <div class="card">
+                    <div class="box">
+                        <h1>2194</h1>
+                        <h3>Students</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-user-o" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>53</h1>
+                        <h3>Teachers</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-address-card fa-10x" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>5</h1>
+                        <h3>Campus</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-university" aria-hidden="true"></i>
+                    </div>
+                </div>
+                <div class="card">
+                    <div class="box">
+                        <h1>350000</h1>
+                        <h3>Enquiries</h3>
+                    </div>
+                    <div class="icon-case">
+                        <i class="fa fa-envelope-square" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="content-2">
+
+                <div class="recent-payments">
+                    <div class="title">
+                        <h2>Emergency Hotlines</h2>
+                        <a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit All</a>
+                    </div>
+                    <table>
+                        <tr>
+                            <th>Number</th>
+                            <th>department</th>
+                            <th>Working Hours</th>
+                            <th>Option</th>
+                        </tr>
+                        <tr>
+                            <td>999</td>
+                            <td>Police Emergencies</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>995</td>
+                            <td>SCDF Ambulance and Fire Service</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1777</td>
+                            <td>Non-Emergency Ambulance Service</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>6547 0000</td>
+                            <td>Traffic Police Information Hotline</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1800 255 0000</td>
+                            <td>Police Hotline</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>71999</td>
+                            <td>Police Emergency SMS</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1800 284 6600</td>
+                            <td>Floods or Drain Obstructions</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>1800 275 5555</td>
+                            <td>HDB Essential Maintenance Service Unit</td>
+                            <td> 24/7 Support</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>+65 6390 9000</td>
+                            <td>PSB Academy, Singapore</td>
+                            <td> 8.30am – 10.00pm</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+
+                        <tr>
+                            <td>+61 2 4921 5000</td>
+                            <td>University of Newcastle, Australia</td>
+                            <td> 8.30am – 10.00pm</td>
+                            <td><a href="#" class="btn"><i class="fa fa-pencil" aria-hidden="true"></i> Edit</a>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
